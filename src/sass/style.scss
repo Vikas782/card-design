@@ -1,0 +1,250 @@
+* {
+    outline: none !important;
+}
+
+// fonts
+@import 'modules/fonts';
+
+// bootstrap
+@import "bootstrap";
+@import 'modules/extend';
+
+body{
+    font-family: $font-family-myriadpro;
+    @include scrollerY(#ddd,#333,0.3,8);
+}
+a, a:hover {
+    text-decoration: none;
+}
+
+a img,
+:link img {
+    border: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+fieldset {
+    border: 0;
+}
+
+// we don't want the yellow background of webkit
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $font-weight-bold;
+}
+
+hr.hr{
+    color:$dark;
+    height: 3px;
+    margin: 0 auto;
+}
+
+.title{
+    //font-size: rfs-value(20px);
+    //font-size: rfs-fluid-value(6rem);
+}
+
+
+
+.scroller{
+    &-waper{
+    
+    }
+    &-content{
+        transition: all 0.04s;
+        -webkit-transition: all 0.04s;
+    }
+    @extend %cover-img;
+}
+
+body{
+    background-color: #262626;
+    color: white;
+}
+
+img{
+    width:100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+.container-fluid {
+    padding: 0px 150px;
+
+    .our-vision {
+        .left-section {
+            width: 100%;
+            max-width: 368px;
+            margin-right: 40px;
+            padding-top: 70px;
+
+            .card {
+                max-width: 363px;
+                padding: 150px 100px 35px 25px;
+                color: white;
+
+                &-body {
+                    .card-title {
+                        margin-bottom: 25px;
+                        font-weight: 800;
+                        font-family: 'Roboto Serif', serif;
+                    }
+
+                    h5 {
+                        font-family: 'Roboto Serif', serif;
+                        font-size: 22px;
+                    }
+
+                    a {
+                        font-family: 'Roboto Serif', serif;
+                        font-size: 18px;
+                        color: #00a8ff;
+                    }
+                }
+            }
+
+            .gradient-1 {
+                background: linear-gradient(black, black) padding-box,
+                linear-gradient(123deg, red, #1e90ff) border-box;
+                border-radius: 20px;
+                border: 7px solid transparent;
+            }
+
+        }
+
+        .right-section {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            padding:  70px 0px 0px 70px;
+            .card {
+                flex: 0 0 400px;
+                max-width: 400px;
+                color: white;
+                box-shadow: -2rem 0 3rem -2rem #000;
+                border-radius: 20px;
+                padding: 25px 30px 25px 25px;
+                background: linear-gradient(85deg, #434343, #262626);
+                transition: all 0.5s ease-in-out;
+
+                .card-body {
+                    time {
+                        font-family: 'Roboto Serif', serif;
+                        color: #d4d4d4;
+                        font-size: 22px;
+                    }
+
+                    h2 {
+                        margin-top: 15px;
+                        max-width: 400px;
+                        height: 200px;
+                        max-height: 150px;
+                    }
+
+                    .card-link {
+                        height: 200px;
+                        max-height: 160px;
+                        font-family: 'Roboto Serif', serif;
+                        a {
+                            font-size: 16px;
+                            color: #fa8231;
+                            margin-right: 10px;
+                        }
+                    }
+                    .profile {
+                        font-size: 22px;
+                        font-family: 'Roboto Serif', serif;
+                        img {
+                            width: 25%;
+                            height: 85px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .card:not(:first-child) {
+                margin-left: -130px;
+                box-shadow: -3rem 0 3rem -2rem #000;
+            }
+            .card:hover {
+                margin-right: 130px;
+                transform: rotate(6.5deg) translate(-20px, -25px);
+            }
+        }
+    }
+}
+.last-card{
+    background:linear-gradient(to bottom, red, #1e90ff);
+    height: 79%;
+    width: 7px;
+    top:97px;
+    right:0px;
+}
+
+::-webkit-scrollbar {
+    height: 15px;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: #434343;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+@media print {
+    .container {
+        width: auto;
+    }
+}
+
+
+
+
+
+
+
+
+// X-Large devices (extra large desktops, less than 1800px) (1600px - 1799px)
+@include media-breakpoint(null, 1800px) {
+
+}
+
+// X-Large devices (extra large desktops, less than 1600px)  (1400px - 1599px)
+@include media-breakpoint(null, 1600px) {
+
+}
+
+
+// X-Large devices (large desktops, less than 1400px)        (1200px - 1399px)
+@include media-breakpoint-down(xxl) {
+
+}
+
+// Large devices (desktops, less than 1200px)                (992px - 1199px)
+@include media-breakpoint-down(xl) {
+
+}
+
+// Medium devices (tablets, less than 992px)                 (0px - 991px)
+@include media-breakpoint-down(lg) {
+
+}
+
+
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(md) {
+
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(sm) {
+
+}
